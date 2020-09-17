@@ -15,6 +15,7 @@ const buildControls = (props) => (
       <BuildControl
         key={ctrl.label}
         label={ctrl.label}
+        removed={() => props.ingredientRemoved(ctrl.type)}
         added={() => props.ingredientAdded(ctrl.type)}
       />
     ))}
